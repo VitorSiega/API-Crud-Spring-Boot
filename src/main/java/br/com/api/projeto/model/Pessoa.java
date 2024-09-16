@@ -14,6 +14,7 @@ import jakarta.persistence.Table;
 @Inheritance(strategy = InheritanceType.JOINED) // Defina a estratégia de herança correta
 @Table(name = "pessoa")
 public class Pessoa {
+	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -26,14 +27,6 @@ public class Pessoa {
     private LocalDate dataNascimento;
     
     // getters e setters
-    
-    public int getId() {
-        return id;
-    }
-    
-    public void setId(int id) {
-        this.id = id;
-    }
     
     public String getNome() {
         return nome;
@@ -50,5 +43,13 @@ public class Pessoa {
     public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
     
 }

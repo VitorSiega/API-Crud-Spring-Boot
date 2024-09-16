@@ -6,4 +6,6 @@ import br.com.api.projeto.model.Login;
 
 public interface ILogin extends JpaRepository<Login, Long> {
 
+	Login getById(int id);
+	Login findByEmail(String email);
 }
